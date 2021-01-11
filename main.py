@@ -98,7 +98,7 @@ def send_sms(_percentage, is_up, _news):
 time_hour = dt.datetime.now().hour
 
 while True:
-    # if time_hour == 6 and check_weekday():  # Opens at 7 a.m. in Frankfurt. So we get the news 1 hour earlier
+    if time_hour == 6 and check_weekday():  # Opens at 7 a.m. in Frankfurt. So we get the news 1 hour earlier
 
     stock_values = get_stock_data()
     percentage = (float(stock_values[1]) / float(stock_values[0]) - 1.0) * 100.0
